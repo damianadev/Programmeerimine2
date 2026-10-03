@@ -13,6 +13,7 @@ namespace KooliProjekt.Application.Data
         [Required]
         [StringLength(25)]
         public string ReservationNo { get; set; }
+
         public int CarModelId { get; set; }
         
     }
