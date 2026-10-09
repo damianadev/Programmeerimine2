@@ -21,8 +21,7 @@ namespace KooliProjekt.Application.Data
         public string Email { get; set; }
 
         [Required]
-        [StringLength(25)]
-        public string LoggedInNo { get; set; }
+        public bool LoggedInNo { get; set; }
 
         [Required]
         [StringLength(255)]

@@ -24,3 +24,4 @@ namespace KooliProjekt.Application.Data
         [Column(TypeName = "decimal(18, 2)")]
         public decimal KmPrice { get; set; }
     }
+}

@@ -17,7 +17,7 @@ namespace KooliProjekt.Application.Data
 
         [Required]
         [Column(TypeName = "datetime2")]
-        public DateTime EndTIme { get; set; }
+        public DateTime EndTime { get; set; }
 
         [Required]
         [Column(TypeName ="decimal(18, 2)")]
@@ -37,7 +37,7 @@ namespace KooliProjekt.Application.Data
 
         public int CarId { get; set; }
 
-        public int CustomerId { get; set }
+        public int CustomerId { get; set; }
 
     }
 }

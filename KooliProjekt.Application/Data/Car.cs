@@ -11,8 +11,7 @@ namespace KooliProjekt.Application.Data
         public int id { get; set; }
 
         [Required]
-        [StringLength(25)]
-        public string ReservationNo { get; set; }
+        public bool ReservationNo { get; set; }
 
         public int CarModelId { get; set; }
         
