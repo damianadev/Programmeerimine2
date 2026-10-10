@@ -17,9 +17,9 @@ namespace KooliProjekt.Application.Data
             }
 
             SeedCustomers(context);
-            SeedCars(context);
-            SeedCarModels(context);
             SeedCarManufacturers(context);
+            SeedCarModels(context);
+            SeedCars(context);
             SeedReservations(context);
             SeedInvoices(context);
             SeedInvoiceLines(context);
