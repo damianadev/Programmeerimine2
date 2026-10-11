@@ -33,245 +33,245 @@ namespace KooliProjekt.Application.Data
                 {
                     CustomerName = "Alexander Miller",
                     Email = "alexander.miller@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "AlexMiller2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Emma Johnson",
                     Email = "emma.johnson@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "EmmaJohnson2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Daniel Wilson",
                     Email = "daniel.wilson@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "DanielWilson2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Olivia Brown",
                     Email = "olivia.brown@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "OliviaBrown2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Michael Davis",
                     Email = "michael.davis@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "MichaelDavis2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Sophia Martin",
                     Email = "sophia.martin@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "SophiaMartin2026!"
                 },
                 new Customer
                 {
                     CustomerName = "James Anderson",
                     Email = "james.anderson@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "JamesAnderson2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Isabella Taylor",
                     Email = "isabella.taylor@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "IsabellaTaylor2026!"
                 },
                 new Customer
                 {
                     CustomerName = "William Thomas",
                     Email = "william.thomas@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "WilliamThomas2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Ava Jackson",
                     Email = "ava.jackson@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "AvaJackson2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Benjamin White",
                     Email = "benjamin.white@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "BenjaminWhite2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Mia Harris",
                     Email = "mia.harris@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "MiaHarris2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Lucas Clark",
                     Email = "lucas.clark@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "LucasClark2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Charlotte Lewis",
                     Email = "charlotte.lewis@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "CharlotteLewis2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Henry Walker",
                     Email = "henry.walker@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "HenryWalker2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Amelia Hall",
                     Email = "amelia.hall@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "AmeliaHall2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Sebastian Allen",
                     Email = "sebastian.allen@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "SebastianAllen2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Harper Young",
                     Email = "harper.young@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "HarperYoung2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Jack Hernandez",
                     Email = "jack.hernandez@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "JackHernandez2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Evelyn King",
                     Email = "evelyn.king@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "EvelynKing2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Theodore Wright",
                     Email = "theodore.wright@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "TheodoreWright2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Abigail Lopez",
                     Email = "abigail.lopez@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "AbigailLopez2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Samuel Hill",
                     Email = "samuel.hill@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "SamuelHill2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Ella Scott",
                     Email = "ella.scott@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "EllaScott2026!"
                 },
                 new Customer
                 {
                     CustomerName = "David Green",
                     Email = "david.green@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "DavidGreen2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Grace Adams",
                     Email = "grace.adams@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "GraceAdams2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Joseph Baker",
                     Email = "joseph.baker@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "JosephBaker2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Chloe Gonzalez",
                     Email = "chloe.gonzalez@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "ChloeGonzalez2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Matthew Nelson",
                     Email = "matthew.nelson@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "MatthewNelson2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Lily Carter",
                     Email = "lily.carter@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "LilyCarter2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Andrew Mitchell",
                     Email = "andrew.mitchell@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "AndrewMitchell2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Zoe Perez",
                     Email = "zoe.perez@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "ZoePerez2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Christopher Roberts",
                     Email = "christopher.roberts@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "ChristopherRoberts2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Natalie Turner",
                     Email = "natalie.turner@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "NatalieTurner2026!"
                 },
                 new Customer
                 {
                     CustomerName = "Ryan Phillips",
                     Email = "ryan.phillips@example.com",
-                    LoggedInNo = false,
+                    LoggedIn = true,
                     Password = "RyanPhillips2026!"
                 }
             };

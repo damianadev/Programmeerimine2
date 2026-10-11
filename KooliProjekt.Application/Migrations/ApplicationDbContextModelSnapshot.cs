@@ -104,7 +104,7 @@ namespace KooliProjekt.Application.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<bool>("LoggedInNo")
+                    b.Property<bool>("LoggedIn")
                         .HasColumnType("bit");
 
                     b.Property<string>("Password")
