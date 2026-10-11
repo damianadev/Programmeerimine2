@@ -1269,212 +1269,212 @@ namespace KooliProjekt.Application.Data
             {
                 new InvoiceLine
                 {
-                    Description = "Economy car rental - Toyota Yaris, 3 days",
-                    Total = 105.00m,
+                    Description = "Economy car rental - Toyota Yaris, 4 hours",
+                    Total = 1350.00m,
                     ReservationId = 1
                 },
                 new InvoiceLine
                 {
-                    Description = "Compact car rental - Volkswagen Golf, 5 days",
-                    Total = 225.00m,
+                    Description = "Compact car rental - Volkswagen Golf, 24 hours",
+                    Total = 6903.00m,
                     ReservationId = 2
                 },
                 new InvoiceLine
                 {
-                    Description = "SUV rental - Toyota RAV4, 4 days",
-                    Total = 320.00m,
+                    Description = "SUV rental - Toyota RAV4, 48 hours",
+                    Total = 20992.00m,
                     ReservationId = 3
                 },
                 new InvoiceLine
                 {
-                    Description = "Luxury sedan rental - BMW 5 Series, 2 days",
-                    Total = 260.00m,
+                    Description = "Luxury sedan rental - BMW 5 Series, 5 hours",
+                    Total = 1853.20m,
                     ReservationId = 4
                 },
                 new InvoiceLine
                 {
-                    Description = "Economy car rental - Kia Rio, 7 days",
-                    Total = 210.00m,
+                    Description = "Economy car rental - Kia Rio, 48 hours",
+                    Total = 24707.50m,
                     ReservationId = 5
                 },
                 new InvoiceLine
                 {
-                    Description = "Family car rental - Skoda Octavia, 5 days",
-                    Total = 275.00m,
+                    Description = "Family car rental - Skoda Octavia, 6 hours",
+                    Total = 1920.80m,
                     ReservationId = 6
                 },
                 new InvoiceLine
                 {
-                    Description = "Premium SUV rental - Volvo XC60, 3 days",
-                    Total = 345.00m,
+                    Description = "Premium SUV rental - Volvo XC60, 72 hours",
+                    Total = 39168.00m,
                     ReservationId = 7
                 },
                 new InvoiceLine
                 {
-                    Description = "Compact car rental - Ford Focus, 4 days",
-                    Total = 168.00m,
+                    Description = "Compact car rental - Ford Focus, 4.5 hours",
+                    Total = 1247.50m,
                     ReservationId = 8
                 },
                 new InvoiceLine
                 {
-                    Description = "Electric car rental - Tesla Model 3, 2 days",
-                    Total = 190.00m,
+                    Description = "Electric car rental - Tesla Model 3, 33 hours",
+                    Total = 13486.60m,
                     ReservationId = 9
                 },
                 new InvoiceLine
                 {
-                    Description = "Minivan rental - Volkswagen Touran, 6 days",
-                    Total = 390.00m,
+                    Description = "Minivan rental - Volkswagen Touran, 72 hours",
+                    Total = 33939.00m,
                     ReservationId = 10
                 },
                 new InvoiceLine
                 {
-                    Description = "Economy car rental - Hyundai i20, 2 days",
-                    Total = 64.00m,
+                    Description = "Economy car rental - Hyundai i20, 4 hours",
+                    Total = 1226.40m,
                     ReservationId = 11
                 },
                 new InvoiceLine
                 {
-                    Description = "Business sedan rental - Audi A4, 4 days",
-                    Total = 360.00m,
+                    Description = "Business sedan rental - Audi A4, 48 hours",
+                    Total = 23968.80m,
                     ReservationId = 12
                 },
                 new InvoiceLine
                 {
-                    Description = "Compact SUV rental - Nissan Qashqai, 3 days",
-                    Total = 210.00m,
+                    Description = "Compact SUV rental - Nissan Qashqai, 11 hours",
+                    Total = 3920.80m,
                     ReservationId = 13
                 },
                 new InvoiceLine
                 {
-                    Description = "Station wagon rental - Skoda Superb, 5 days",
-                    Total = 325.00m,
+                    Description = "Station wagon rental - Skoda Superb, 72 hours",
+                    Total = 41401.00m,
                     ReservationId = 14
                 },
                 new InvoiceLine
                 {
-                    Description = "Economy car rental - Renault Clio, 6 days",
-                    Total = 174.00m,
+                    Description = "Economy car rental - Renault Clio, 7 hours",
+                    Total = 2106.30m,
                     ReservationId = 15
                 },
                 new InvoiceLine
                 {
-                    Description = "Luxury SUV rental - BMW X5, 2 days",
-                    Total = 310.00m,
+                    Description = "Luxury SUV rental - BMW X5, 48 hours",
+                    Total = 22080.20m,
                     ReservationId = 16
                 },
                 new InvoiceLine
                 {
-                    Description = "Hybrid car rental - Toyota Corolla, 4 days",
-                    Total = 196.00m,
+                    Description = "Hybrid car rental - Toyota Corolla, 9 hours",
+                    Total = 2981.00m,
                     ReservationId = 17
                 },
                 new InvoiceLine
                 {
-                    Description = "Family SUV rental - Kia Sportage, 7 days",
-                    Total = 420.00m,
+                    Description = "Family SUV rental - Kia Sportage, 96 hours",
+                    Total = 51689.00m,
                     ReservationId = 18
                 },
                 new InvoiceLine
                 {
-                    Description = "Premium sedan rental - Mercedes-Benz E-Class, 3 days",
-                    Total = 390.00m,
+                    Description = "Premium sedan rental - Mercedes-Benz E-Class, 5 hours",
+                    Total = 1893.60m,
                     ReservationId = 19
                 },
                 new InvoiceLine
                 {
-                    Description = "Compact car rental - Opel Astra, 5 days",
-                    Total = 200.00m,
+                    Description = "Compact car rental - Opel Astra, 48 hours",
+                    Total = 20639.40m,
                     ReservationId = 20
                 },
                 new InvoiceLine
                 {
-                    Description = "Electric car rental - Nissan Leaf, 3 days",
-                    Total = 165.00m,
+                    Description = "Electric car rental - Nissan Leaf, 4 hours",
+                    Total = 1182.00m,
                     ReservationId = 21
                 },
                 new InvoiceLine
                 {
-                    Description = "Convertible rental - BMW 4 Series, 2 days",
-                    Total = 280.00m,
+                    Description = "Convertible rental - BMW 4 Series, 72 hours",
+                    Total = 40095.50m,
                     ReservationId = 22
                 },
                 new InvoiceLine
                 {
-                    Description = "Economy car rental - Toyota Aygo, 4 days",
-                    Total = 112.00m,
+                    Description = "Economy car rental - Toyota Aygo, 9 hours",
+                    Total = 3102.40m,
                     ReservationId = 23
                 },
                 new InvoiceLine
                 {
-                    Description = "Large SUV rental - Hyundai Santa Fe, 5 days",
-                    Total = 375.00m,
+                    Description = "Large SUV rental - Hyundai Santa Fe, 96 hours",
+                    Total = 48780.00m,
                     ReservationId = 24
                 },
                 new InvoiceLine
                 {
-                    Description = "Hybrid SUV rental - Toyota C-HR, 3 days",
-                    Total = 195.00m,
+                    Description = "Hybrid SUV rental - Toyota C-HR, 6 hours",
+                    Total = 1904.40m,
                     ReservationId = 25
                 },
                 new InvoiceLine
                 {
-                    Description = "Premium electric car rental - Tesla Model Y, 4 days",
-                    Total = 340.00m,
+                    Description = "Premium electric car rental - Tesla Model Y, 72 hours",
+                    Total = 34436.00m,
                     ReservationId = 26
                 },
                 new InvoiceLine
                 {
-                    Description = "Compact car rental - Seat Leon, 2 days",
-                    Total = 84.00m,
+                    Description = "Compact car rental - Seat Leon, 7 hours",
+                    Total = 1999.20m,
                     ReservationId = 27
                 },
                 new InvoiceLine
                 {
-                    Description = "Passenger van rental - Mercedes-Benz Vito, 3 days",
-                    Total = 330.00m,
+                    Description = "Passenger van rental - Mercedes-Benz Vito, 72 hours",
+                    Total = 37927.20m,
                     ReservationId = 28
                 },
                 new InvoiceLine
                 {
-                    Description = "Business SUV rental - Audi Q5, 4 days",
-                    Total = 360.00m,
+                    Description = "Business SUV rental - Audi Q5, 5 hours",
+                    Total = 1867.80m,
                     ReservationId = 29
                 },
                 new InvoiceLine
                 {
-                    Description = "Economy car rental - Dacia Sandero, 7 days",
-                    Total = 175.00m,
+                    Description = "Economy car rental - Dacia Sandero, 96 hours",
+                    Total = 52838.40m,
                     ReservationId = 30
                 },
                 new InvoiceLine
                 {
-                    Description = "Family estate car rental - Volkswagen Passat Variant, 5 days",
-                    Total = 300.00m,
+                    Description = "Family estate car rental - Volkswagen Passat Variant, 9 hours",
+                    Total = 2959.20m,
                     ReservationId = 31
                 },
                 new InvoiceLine
                 {
-                    Description = "Premium sports car rental - Porsche 911, 1 day",
-                    Total = 450.00m,
+                    Description = "Premium sports car rental - Porsche 911, 72 hours",
+                    Total = 37494.00m,
                     ReservationId = 32
                 },
                 new InvoiceLine
                 {
-                    Description = "Hybrid sedan rental - Toyota Camry, 6 days",
-                    Total = 330.00m,
+                    Description = "Hybrid sedan rental - Toyota Camry, 5 hours",
+                    Total = 1521.80m,
                     ReservationId = 33
                 },
                 new InvoiceLine
                 {
-                    Description = "Luxury SUV rental - Mercedes-Benz GLE, 3 days",
-                    Total = 420.00m,
+                    Description = "Luxury SUV rental - Mercedes-Benz GLE, 72 hours",
+                    Total = 40907.20m,
                     ReservationId = 34
                 },
                 new InvoiceLine
                 {
-                    Description = "Compact electric car rental - Volkswagen ID.3, 5 days",
-                    Total = 250.00m,
+                    Description = "Compact electric car rental - Volkswagen ID.3, 3 hours",
+                    Total = 1055.00m,
                     ReservationId = 35
                 }
             };
