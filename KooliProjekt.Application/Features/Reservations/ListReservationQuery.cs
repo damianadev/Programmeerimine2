@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using KooliProjekt.Application.Data;
+using MediatR;
 
 namespace KooliProjekt.Application.Features.Reservations
 {
-    internal class ListReservationQuery
+    public class ListReservationQuery : IRequest<IEnumerable<Reservation>>
     {
     }
 }

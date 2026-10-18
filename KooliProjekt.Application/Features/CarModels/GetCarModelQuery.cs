@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using KooliProjekt.Application.Data;
+using MediatR;
 
 namespace KooliProjekt.Application.Features.CarModels
 {
-    internal class GetCarModelQuery
+    public class GetCarModelQuery : IRequest<CarModel>
     {
+        public int Id { get; set; }
     }
 }

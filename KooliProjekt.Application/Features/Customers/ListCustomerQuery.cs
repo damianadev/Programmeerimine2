@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using KooliProjekt.Application.Data;
+using MediatR;
 
 namespace KooliProjekt.Application.Features.Customers
 {
-    internal class ListCustomerQuery
+    public class ListCustomerQuery : IRequest<IEnumerable<Customer>>
     {
     }
 }
