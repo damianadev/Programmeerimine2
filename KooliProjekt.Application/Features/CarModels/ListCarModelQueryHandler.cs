@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KooliProjekt.Application.Features.CarModels
 {
-    internal class ListCarModelQueryHandler : IRequestHandler<ListCarModelQuery, IEnumerable<CarModel>>
+    public class ListCarModelQueryHandler : IRequestHandler<ListCarModelQuery, IEnumerable<CarModel>>
     {
         private readonly ApplicationDbContext _dbContext;
 
