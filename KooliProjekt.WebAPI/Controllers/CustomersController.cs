@@ -42,5 +42,18 @@ namespace KooliProjekt.WebAPI.Controllers
 
             return Json(result);
         }
+
+        [HttpGet("list/{page}/{pageSize}")]
+        public async Task<IActionResult> List(int page, int pageSize)
+        {
+            var query = new ListCustomerQuery
+            {
+                Page = page,
+                PageSize = pageSize
+            };
+            var result = await _mediator.Send(query);
+
+            return Result(result);
+        }
     }
 }
