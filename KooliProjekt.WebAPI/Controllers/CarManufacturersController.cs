@@ -1,8 +1,8 @@
-﻿using KooliProjekt.Application.Features.CarManufacturers;
+﻿using System.Threading.Tasks;
+using KooliProjekt.Application.Features.CarManufacturers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
-using System.Threading.Tasks;
 
 namespace KooliProjekt.WebAPI.Controllers
 {
@@ -26,21 +26,20 @@ namespace KooliProjekt.WebAPI.Controllers
             var query = new GetCarManufacturerQuery { Id = id };
             var result = await _mediator.Send(query);
 
-            if (result == null)
-            {
-                return NotFound();
-            }
-
-            return Json(result);
+            return Result(result);
         }
 
-        [HttpGet("list")]
-        public async Task<IActionResult> List()
+        [HttpGet("list/{page}/{pageSize}")]
+        public async Task<IActionResult> List(int page, int pageSize)
         {
-            var query = new ListCarManufacturerQuery();
+            var query = new ListCarManufacturerQuery
+            {
+                Page = page,
+                PageSize = pageSize
+            };
             var result = await _mediator.Send(query);
 
-            return Json(result);
+            return Result(result);
         }
     }
 }

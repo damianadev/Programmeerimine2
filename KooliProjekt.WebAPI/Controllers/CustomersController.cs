@@ -26,21 +26,7 @@ namespace KooliProjekt.WebAPI.Controllers
             var query = new GetCustomerQuery { Id = id };
             var result = await _mediator.Send(query);
 
-            if (result == null)
-            {
-                return NotFound();
-            }
-
-            return Json(result);
-        }
-
-        [HttpGet("list")]
-        public async Task<IActionResult> List()
-        {
-            var query = new ListCustomerQuery();
-            var result = await _mediator.Send(query);
-
-            return Json(result);
+            return Result(result);
         }
 
         [HttpGet("list/{page}/{pageSize}")]

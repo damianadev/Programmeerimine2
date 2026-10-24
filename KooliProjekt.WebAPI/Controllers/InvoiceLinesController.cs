@@ -26,21 +26,20 @@ namespace KooliProjekt.WebAPI.Controllers
             var query = new GetInvoiceLineQuery { Id = id };
             var result = await _mediator.Send(query);
 
-            if (result == null)
-            {
-                return NotFound();
-            }
-
-            return Json(result);
+            return Result(result);
         }
 
-        [HttpGet("list")]
-        public async Task<IActionResult> List()
+        [HttpGet("list/{page}/{pageSize}")]
+        public async Task<IActionResult> List(int page, int pageSize)
         {
-            var query = new ListInvoiceLineQuery();
+            var query = new ListInvoiceLineQuery
+            {
+                Page = page,
+                PageSize = pageSize
+            };
             var result = await _mediator.Send(query);
 
-            return Json(result);
+            return Result(result);
         }
     }
 }
