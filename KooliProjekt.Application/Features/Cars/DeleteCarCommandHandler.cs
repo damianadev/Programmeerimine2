@@ -1,5 +1,4 @@
 ﻿using KooliProjekt.Application.Data;
-using KooliProjekt.Application.Features.Customers;
 using KooliProjekt.Application.Infrastructure.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;

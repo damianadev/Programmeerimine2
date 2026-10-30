@@ -1,5 +1,4 @@
 ﻿using KooliProjekt.Application.Data;
-using KooliProjekt.Application.Features.Customers;
 using KooliProjekt.Application.Infrastructure.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -43,6 +42,8 @@ namespace KooliProjekt.Application.Features.Cars
             }
 
             list.id = request.id;
+            list.ReservationNo = request.ReservationNo;
+            list.CarModelId = request.CarModelId;
 
 
             await _dbContext.SaveChangesAsync();
