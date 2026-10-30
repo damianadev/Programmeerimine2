@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-using KooliProjekt.Application.Features.Cars;
+﻿using KooliProjekt.Application.Features.Cars;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
+using System.Threading.Tasks;
 
 namespace KooliProjekt.WebAPI.Controllers
 {
@@ -38,6 +38,22 @@ namespace KooliProjekt.WebAPI.Controllers
                 PageSize = pageSize
             };
             var result = await _mediator.Send(query);
+
+            return Result(result);
+        }
+
+        [HttpPost("save")]
+        public async Task<IActionResult> Save([FromBody] SaveCarCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            return Result(result);
+        }
+
+        [HttpDelete("delete")]
+        public async Task<IActionResult> Delete([FromBody] DeleteCarCommand command)
+        {
+            var result = await _mediator.Send(command);
 
             return Result(result);
         }
