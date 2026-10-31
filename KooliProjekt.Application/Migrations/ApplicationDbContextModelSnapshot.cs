@@ -24,11 +24,11 @@ namespace KooliProjekt.Application.Migrations
 
             modelBuilder.Entity("KooliProjekt.Application.Data.Car", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CarModelId")
                         .HasColumnType("int");
@@ -36,36 +36,36 @@ namespace KooliProjekt.Application.Migrations
                     b.Property<bool>("ReservationNo")
                         .HasColumnType("bit");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Cars");
                 });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.CarManufacturer", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("CarManufacturers");
                 });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.CarModel", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CarManufacturerId")
                         .HasColumnType("int");
@@ -81,7 +81,7 @@ namespace KooliProjekt.Application.Migrations
                     b.Property<decimal>("TimePrice")
                         .HasColumnType("decimal(18, 2)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("CarModels");
                 });
@@ -122,11 +122,11 @@ namespace KooliProjekt.Application.Migrations
 
             modelBuilder.Entity("KooliProjekt.Application.Data.Invoice", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
@@ -140,18 +140,18 @@ namespace KooliProjekt.Application.Migrations
                     b.Property<bool>("Paid")
                         .HasColumnType("bit");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Invoices");
                 });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.InvoiceLine", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -164,18 +164,18 @@ namespace KooliProjekt.Application.Migrations
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(18, 2)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("InvoiceLines");
                 });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.Reservation", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CarId")
                         .HasColumnType("int");
@@ -201,7 +201,7 @@ namespace KooliProjekt.Application.Migrations
                     b.Property<decimal>("TimePrice")
                         .HasColumnType("decimal(18, 2)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Reservations");
                 });

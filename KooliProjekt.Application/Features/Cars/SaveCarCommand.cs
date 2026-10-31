@@ -9,7 +9,7 @@ namespace KooliProjekt.Application.Features.Cars
 {
     public class SaveCarCommand : IRequest<OperationResult>, ITransactional
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public bool ReservationNo { get; set; }
         public int CarModelId { get; set; }
     }

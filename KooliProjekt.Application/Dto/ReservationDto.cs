@@ -8,7 +8,7 @@ namespace KooliProjekt.Application.Dto
 {
     public class ReservationDto
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public decimal StartKm { get; set; }

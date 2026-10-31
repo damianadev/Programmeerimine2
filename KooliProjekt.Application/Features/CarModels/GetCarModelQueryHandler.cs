@@ -27,10 +27,10 @@ namespace KooliProjekt.Application.Features.CarModels
             var response = new OperationResult<CarModelDto>();
             response.Value = await _dbContext.CarModels
                 .AsNoTracking()
-                .Where(list => list.id == request.Id)
+                .Where(list => list.Id == request.Id)
                 .Select(list => new CarModelDto
                 {
-                    id = list.id,
+                    Id = list.Id,
                     Name = list.Name,
                     CarManufacturerId = list.CarManufacturerId,
                     TimePrice = list.TimePrice,

@@ -8,7 +8,7 @@ namespace KooliProjekt.Application.Data
 {
     public class Car
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public bool ReservationNo { get; set; }

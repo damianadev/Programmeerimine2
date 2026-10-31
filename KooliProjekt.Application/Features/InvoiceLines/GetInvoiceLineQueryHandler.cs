@@ -27,10 +27,10 @@ namespace KooliProjekt.Application.Features.InvoiceLines
             var response = new OperationResult<InvoiceLineDto>();
             response.Value = await _dbContext.InvoiceLines
                 .AsNoTracking()
-                .Where(list => list.id == request.Id)
+                .Where(list => list.Id == request.Id)
                 .Select(list => new InvoiceLineDto
                 {
-                    id = list.id,
+                    Id = list.Id,
                     Description = list.Description,
                     Total = list.Total,
                     ReservationId = list.ReservationId,

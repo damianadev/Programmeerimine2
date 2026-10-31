@@ -8,7 +8,7 @@ namespace KooliProjekt.Application.Dto
 {
     public class InvoiceLineDto
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
         public decimal Total { get; set; }
         public int ReservationId { get; set; }

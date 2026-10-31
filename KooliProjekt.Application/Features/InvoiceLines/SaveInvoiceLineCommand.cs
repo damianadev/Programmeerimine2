@@ -9,7 +9,7 @@ namespace KooliProjekt.Application.Features.InvoiceLines
 {
     public class SaveInvoiceLineCommand : IRequest<OperationResult>, ITransactional
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
         public decimal Total { get; set; }
         public int ReservationId { get; set; }

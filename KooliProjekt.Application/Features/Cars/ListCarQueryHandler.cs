@@ -28,10 +28,10 @@ namespace KooliProjekt.Application.Features.Cars
             var result = new OperationResult<PagedResult<CarDto>>();
             result.Value = await _dbContext.Cars
                 .AsNoTracking()
-                .OrderByDescending(list => list.id)
+                .OrderByDescending(list => list.Id)
                 .Select(list => new CarDto
                 {
-                    id = list.id,
+                    Id = list.Id,
                     ReservationNo = list.ReservationNo,
                     CarModelId = list.CarModelId,
                 })

@@ -9,7 +9,7 @@ namespace KooliProjekt.Application.Features.CarManufacturers
 {
     public class SaveCarManufacturerCommand : IRequest<OperationResult>, ITransactional
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

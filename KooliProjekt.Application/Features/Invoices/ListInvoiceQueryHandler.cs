@@ -28,10 +28,10 @@ namespace KooliProjekt.Application.Features.Invoices
             var result = new OperationResult<PagedResult<InvoiceDto>>();
             result.Value = await _dbContext.Invoices
                 .AsNoTracking()
-                .OrderByDescending(list => list.id)
+                .OrderByDescending(list => list.Id)
                 .Select(list => new InvoiceDto
                 {
-                    id = list.id,
+                    Id = list.Id,
                     InvoiceDate = list.InvoiceDate,
                     DueTime = list.DueTime,
                     Paid = list.Paid,

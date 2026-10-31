@@ -8,7 +8,7 @@ namespace KooliProjekt.Application.Dto
 {
     public class InvoiceDto
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public DateTime InvoiceDate { get; set; }
         public DateTime DueTime { get; set; }
         public bool Paid { get; set; }

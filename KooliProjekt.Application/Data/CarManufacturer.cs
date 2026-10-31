@@ -8,7 +8,7 @@ namespace KooliProjekt.Application.Data
 {
     public class CarManufacturer
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [StringLength(25)]

@@ -27,10 +27,10 @@ namespace KooliProjekt.Application.Features.Reservations
             var response = new OperationResult<ReservationDto>();
             response.Value = await _dbContext.Reservations
                 .AsNoTracking()
-                .Where(list => list.id == request.Id)
+                .Where(list => list.Id == request.Id)
                 .Select(list => new ReservationDto
                 {
-                    id = list.id,
+                    Id = list.Id,
                     StartTime = list.StartTime,
                     EndTime = list.EndTime,
                     StartKm = list.StartKm,

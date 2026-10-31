@@ -23,7 +23,7 @@ namespace KooliProjekt.Application.Features.Reservations
         public async Task<OperationResult> Handle(DeleteReservationCommand request, CancellationToken cancellationToken)
         {
             await _dbContext.Reservations
-                .Where(list => list.id == request.Id)
+                .Where(list => list.Id == request.Id)
                 .ExecuteDeleteAsync();
 
             return new OperationResult();

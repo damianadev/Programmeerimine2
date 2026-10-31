@@ -9,7 +9,7 @@ namespace KooliProjekt.Application.Features.Reservations
 {
     public class SaveReservationCommand : IRequest<OperationResult>, ITransactional
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public decimal StartKm { get; set; }

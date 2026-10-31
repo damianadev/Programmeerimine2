@@ -28,10 +28,10 @@ namespace KooliProjekt.Application.Features.Reservations
             var result = new OperationResult<PagedResult<ReservationDto>>();
             result.Value = await _dbContext.Reservations
                 .AsNoTracking()
-                .OrderByDescending(list => list.id)
+                .OrderByDescending(list => list.Id)
                 .Select(list => new ReservationDto
                 {
-                    id = list.id,
+                    Id = list.Id,
                     StartTime = list.StartTime,
                     EndTime = list.EndTime,
                     StartKm = list.StartKm,

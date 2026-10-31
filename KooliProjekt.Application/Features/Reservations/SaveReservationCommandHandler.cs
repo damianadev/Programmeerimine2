@@ -24,24 +24,24 @@ namespace KooliProjekt.Application.Features.Reservations
             var result = new OperationResult();
 
             var userExists = await _dbContext.Reservations
-                .AnyAsync(user => user.id == request.id);
+                .AnyAsync(user => user.Id == request.Id);
             if (!userExists)
             {
-                return result.AddPropertyError("Id", "Cannot find resrvation with ID " + request.id);
+                return result.AddPropertyError("Id", "Cannot find resrvation with ID " + request.Id);
             }
 
             var list = new Reservation();
 
-            if (request.id == 0)
+            if (request.Id == 0)
             {
                 _dbContext.Add(list);
             }
             else
             {
-                list = await _dbContext.FindAsync<Reservation>(request.id);
+                list = await _dbContext.FindAsync<Reservation>(request.Id);
             }
 
-            list.id = request.id;
+            list.Id = request.Id;
             list.StartTime = request.StartTime;
             list.EndTime = request.EndTime;
             list.StartKm = request.StartKm;

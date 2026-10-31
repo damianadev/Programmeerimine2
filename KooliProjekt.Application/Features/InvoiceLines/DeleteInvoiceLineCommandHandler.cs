@@ -24,7 +24,7 @@ namespace KooliProjekt.Application.Features.InvoiceLines
         public async Task<OperationResult> Handle(DeleteInvoiceLineCommand request, CancellationToken cancellationToken)
         {
             await _dbContext.InvoiceLines
-                .Where(list => list.id == request.Id)
+                .Where(list => list.Id == request.Id)
                 .ExecuteDeleteAsync();
 
             return new OperationResult();

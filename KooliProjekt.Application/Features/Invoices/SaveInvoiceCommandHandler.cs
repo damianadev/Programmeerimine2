@@ -24,24 +24,24 @@ namespace KooliProjekt.Application.Features.Invoices
             var result = new OperationResult();
 
             var userExists = await _dbContext.Invoices
-                .AnyAsync(user => user.id == request.id);
+                .AnyAsync(user => user.Id == request.Id);
             if (!userExists)
             {
-                return result.AddPropertyError("Id", "Cannot find invoice with ID " + request.id);
+                return result.AddPropertyError("Id", "Cannot find invoice with ID " + request.Id);
             }
 
             var list = new Invoice();
 
-            if (request.id == 0)
+            if (request.Id == 0)
             {
                 _dbContext.Add(list);
             }
             else
             {
-                list = await _dbContext.FindAsync<Invoice>(request.id);
+                list = await _dbContext.FindAsync<Invoice>(request.Id);
             }
 
-            list.id = request.id;
+            list.Id = request.Id;
             list.InvoiceDate = request.InvoiceDate;
             list.DueTime = request.DueTime;
             list.Paid = request.Paid;

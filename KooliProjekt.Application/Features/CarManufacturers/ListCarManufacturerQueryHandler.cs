@@ -28,10 +28,10 @@ namespace KooliProjekt.Application.Features.CarManufacturers
             var result = new OperationResult<PagedResult<CarManufacturerDto>>();
             result.Value = await _dbContext.CarManufacturers
                 .AsNoTracking()
-                .OrderByDescending(list => list.id)
+                .OrderByDescending(list => list.Id)
                 .Select(list => new CarManufacturerDto
                 {
-                    id = list.id,
+                    Id = list.Id,
                     Name = list.Name,
                 })
                 .GetPagedAsync(request.Page, request.PageSize);

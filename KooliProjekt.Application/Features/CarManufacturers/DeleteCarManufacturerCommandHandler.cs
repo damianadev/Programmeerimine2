@@ -23,7 +23,7 @@ namespace KooliProjekt.Application.Features.CarManufacturers
         public async Task<OperationResult> Handle(DeleteCarManufacturerCommand request, CancellationToken cancellationToken)
         {
             await _dbContext.CarManufacturers
-                .Where(list => list.id == request.Id)
+                .Where(list => list.Id == request.Id)
                 .ExecuteDeleteAsync();
 
             return new OperationResult();

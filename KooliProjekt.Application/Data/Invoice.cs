@@ -9,7 +9,7 @@ namespace KooliProjekt.Application.Data
 {
     public class Invoice
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [Column(TypeName = "datetime2")]

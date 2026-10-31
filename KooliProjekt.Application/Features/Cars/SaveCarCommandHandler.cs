@@ -24,24 +24,24 @@ namespace KooliProjekt.Application.Features.Cars
             var result = new OperationResult();
 
             var userExists = await _dbContext.Cars
-                .AnyAsync(user => user.id == request.id);
+                .AnyAsync(user => user.Id == request.Id);
             if (!userExists)
             {
-                return result.AddPropertyError("Id", "Cannot find car with ID " + request.id);
+                return result.AddPropertyError("Id", "Cannot find car with ID " + request.Id);
             }
 
             var list = new Car();
 
-            if (request.id == 0)
+            if (request.Id == 0)
             {
                 _dbContext.Add(list);
             }
             else
             {
-                list = await _dbContext.FindAsync<Car>(request.id);
+                list = await _dbContext.FindAsync<Car>(request.Id);
             }
 
-            list.id = request.id;
+            list.Id = request.Id;
             list.ReservationNo = request.ReservationNo;
             list.CarModelId = request.CarModelId;
 
