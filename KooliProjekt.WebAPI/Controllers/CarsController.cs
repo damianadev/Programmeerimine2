@@ -1,7 +1,10 @@
 ﻿using KooliProjekt.Application.Features.Cars;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
+using System;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace KooliProjekt.WebAPI.Controllers
@@ -57,5 +60,25 @@ namespace KooliProjekt.WebAPI.Controllers
 
             return Result(result);
         }
+
+        [HttpPost("AddFile")]
+        public async Task<IActionResult> AddFile(int id, IFormFile file)
+        {
+            var extension = Path.GetExtension(file.FileName);
+            // var carModel = ;
+            var fileName = Guid.NewGuid().ToString() + extension;
+            using var inputStream = file.OpenReadStream();
+
+            var command = new AddCarFileCommand();
+            command.Id = id;
+            // command.CarModel = ;
+            command.FileName = fileName;
+            command.InputStream = inputStream;
+
+            var result = await _mediator.Send(command);
+
+            return Result(result);
+        }
+
     }
 }
