@@ -28,5 +28,21 @@ namespace KooliProjekt.Application.Infrastructure.Files
             using var fileStream = new FileStream(filePath, FileMode.Create);
             await inputStream.CopyToAsync(fileStream);
         }
+
+        public async Task Delete(string fileName)
+        {
+            var folderPath = Path.Combine(_filesRoot, FileStore.Photos);
+            var filePath = Path.Combine(folderPath, fileName);
+
+            if (File.Exists(filePath))
+            {
+                await Task.Run(() => File.Delete(filePath));
+            }
+            else
+            {
+                throw new FileNotFoundException("File not found");
+            }
+        }
+
     }
 }

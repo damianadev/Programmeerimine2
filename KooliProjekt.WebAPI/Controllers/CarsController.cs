@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace KooliProjekt.WebAPI.Controllers
 {
-    public class CarsController : ApiControllerBase 
+    public class CarsController : ApiControllerBase
     {
         private readonly IMediator _mediator;
 
         public CarsController(IMediator mediator)
         {
-            _mediator = mediator; 
+            _mediator = mediator;
         }
 
         [HttpGet("get/{id}")]
@@ -65,15 +65,25 @@ namespace KooliProjekt.WebAPI.Controllers
         public async Task<IActionResult> AddFile(int id, IFormFile file)
         {
             var extension = Path.GetExtension(file.FileName);
-            // var carModel = ;
             var fileName = Guid.NewGuid().ToString() + extension;
             using var inputStream = file.OpenReadStream();
 
             var command = new AddCarFileCommand();
             command.Id = id;
-            // command.CarModel = ;
             command.FileName = fileName;
             command.InputStream = inputStream;
+
+            var result = await _mediator.Send(command);
+
+            return Result(result);
+        }
+
+        [HttpDelete("DeleteFile")]
+        public async Task<IActionResult> DeleteFile(int id, string fileName)
+        {
+            var command = new DeleteCarFileCommand();
+            command.Id = id;
+            command.FileName = fileName;
 
             var result = await _mediator.Send(command);
 
