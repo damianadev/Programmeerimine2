@@ -10,7 +10,7 @@ namespace KooliProjekt.Application.Infrastructure.Files
     {
         Task Save(string fileName, string fileStore, Stream inputStream);
         Task Delete(string fileName);
-        //Task Get(string fileName);
+        Task<Stream> Get(string fileName);
         //Task List();
     }
 }

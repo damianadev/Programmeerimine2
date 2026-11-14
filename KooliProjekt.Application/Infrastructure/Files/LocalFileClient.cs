@@ -44,5 +44,20 @@ namespace KooliProjekt.Application.Infrastructure.Files
             }
         }
 
+        public Task<Stream> Get(string fileName)
+        {
+            var folderPath = Path.Combine(_filesRoot, FileStore.Photos);
+            var filePath = Path.Combine(folderPath, fileName);
+
+            if (File.Exists(filePath))
+            {
+                return Task.FromResult<Stream>(File.OpenRead(filePath));
+            }
+            else
+            {
+                throw new FileNotFoundException("File not found");
+            }
+
+        }
     }
 }

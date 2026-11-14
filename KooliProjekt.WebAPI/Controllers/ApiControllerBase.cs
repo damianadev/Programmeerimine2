@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.IO;
 
 namespace KooliProjekt.WebAPI.Controllers
 {
@@ -47,5 +48,21 @@ namespace KooliProjekt.WebAPI.Controllers
 
             return Ok(serialized);
         }
+
+        protected IActionResult Result(OperationResult<Stream> result)
+        {
+            if (result.HasErrors)
+            {
+                return BadRequest();
+            }
+
+            if (result.Value == null)
+            {
+                return NotFound();
+            }
+
+            return File(result.Value, "image/jpeg");
+        }
+
     }
 }

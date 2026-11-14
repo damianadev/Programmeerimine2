@@ -90,5 +90,16 @@ namespace KooliProjekt.WebAPI.Controllers
             return Result(result);
         }
 
+        [HttpGet("GetFile")]
+        public async Task<IActionResult> GetFile(int id, string fileName)
+        {
+            var command = new GetCarFileCommand();
+            command.Id = id;
+            command.FileName = fileName;
+
+            var result = await _mediator.Send(command);
+
+            return Result(result);
+        }
     }
 }
