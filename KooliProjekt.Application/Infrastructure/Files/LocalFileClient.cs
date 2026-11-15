@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -58,6 +60,24 @@ namespace KooliProjekt.Application.Infrastructure.Files
                 throw new FileNotFoundException("File not found");
             }
 
+        }
+        
+        public Task<List<Stream>> List(int id)
+        {
+            var folderPath = Path.Combine(_filesRoot, FileStore.Photos);
+            var files = new List<Stream>();
+
+            if (!Directory.Exists(folderPath))
+            {
+                return Task.FromResult(files);
+            }
+
+            foreach (var file in Directory.GetFiles(folderPath))
+            {
+                files.Add(File.OpenRead(file));
+            }
+
+            return Task.FromResult(files);
         }
     }
 }

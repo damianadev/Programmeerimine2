@@ -11,6 +11,6 @@ namespace KooliProjekt.Application.Infrastructure.Files
         Task Save(string fileName, string fileStore, Stream inputStream);
         Task Delete(string fileName);
         Task<Stream> Get(string fileName);
-        //Task List();
+        Task<List<Stream>> List(int id);
     }
 }

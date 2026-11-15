@@ -101,5 +101,16 @@ namespace KooliProjekt.WebAPI.Controllers
 
             return Result(result);
         }
+
+        [HttpGet("ListFile")]
+        public async Task<IActionResult> ListFile(int id)
+        {
+            var query = new ListCarFileQuery();
+            query.Id = id;
+
+            var result = await _mediator.Send(query);
+
+            return Result(result);
+        }
     }
 }
