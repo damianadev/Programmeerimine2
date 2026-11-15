@@ -23,7 +23,7 @@ namespace KooliProjekt.Application.Features.Cars
 
         public async Task<OperationResult> Handle(DeleteCarFileCommand request, CancellationToken cancellationToken)
         {
-            await _fileClient.Delete(request.FileName);
+            await _fileClient.Delete(request.Id, request.FileName);
 
             return new OperationResult();
         }

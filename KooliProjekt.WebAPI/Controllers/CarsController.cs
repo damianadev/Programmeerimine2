@@ -102,15 +102,15 @@ namespace KooliProjekt.WebAPI.Controllers
             return Result(result);
         }
 
-        [HttpGet("ListFile")]
-        public async Task<IActionResult> ListFile(int id)
+        [HttpGet("ListFiles")]
+        public async Task<IActionResult> ListFiles(int id)
         {
             var query = new ListCarFileQuery();
             query.Id = id;
 
             var result = await _mediator.Send(query);
 
-            return Result(result);
+            return await Result(result);
         }
     }
 }

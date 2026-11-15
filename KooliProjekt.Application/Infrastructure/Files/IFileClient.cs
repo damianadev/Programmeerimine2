@@ -8,9 +8,9 @@ namespace KooliProjekt.Application.Infrastructure.Files
 {
     public interface IFileClient
     {
-        Task Save(string fileName, string fileStore, Stream inputStream);
-        Task Delete(string fileName);
-        Task<Stream> Get(string fileName);
+        Task Save(int id, string fileName, string fileStore, Stream inputStream);
+        Task Delete(int id, string fileName);
+        Task<Stream> Get(int id, string fileName);
         Task<List<Stream>> List(int id);
     }
 }

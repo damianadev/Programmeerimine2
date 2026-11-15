@@ -23,7 +23,7 @@ namespace KooliProjekt.Application.Features.Cars
 
         public async Task<OperationResult> Handle(AddCarFileCommand request, CancellationToken cancellationToken)
         {
-            await _fileClient.Save(request.FileName, FileStore.Photos, request.InputStream);
+            await _fileClient.Save(request.Id, request.FileName, FileStore.Photos, request.InputStream);
 
             return new OperationResult();
         }

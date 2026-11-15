@@ -5,6 +5,7 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace KooliProjekt.Application.Infrastructure.Files
 {
@@ -17,9 +18,9 @@ namespace KooliProjekt.Application.Infrastructure.Files
             _filesRoot = filesRoot;
         }
 
-        public async Task Save(string fileName, string fileStore, Stream inputStream)
+        public async Task Save(int id, string fileName, string fileStore, Stream inputStream)
         {
-            var folderPath = Path.Combine(_filesRoot, fileStore);
+            var folderPath = Path.Combine(_filesRoot, fileStore, id.ToString());
             var filePath = Path.Combine(folderPath, fileName);
 
             if (!Directory.Exists(folderPath))
@@ -31,9 +32,9 @@ namespace KooliProjekt.Application.Infrastructure.Files
             await inputStream.CopyToAsync(fileStream);
         }
 
-        public async Task Delete(string fileName)
+        public async Task Delete(int id, string fileName)
         {
-            var folderPath = Path.Combine(_filesRoot, FileStore.Photos);
+            var folderPath = Path.Combine(_filesRoot, FileStore.Photos, id.ToString());
             var filePath = Path.Combine(folderPath, fileName);
 
             if (File.Exists(filePath))
@@ -46,9 +47,9 @@ namespace KooliProjekt.Application.Infrastructure.Files
             }
         }
 
-        public Task<Stream> Get(string fileName)
+        public Task<Stream> Get(int id, string fileName)
         {
-            var folderPath = Path.Combine(_filesRoot, FileStore.Photos);
+            var folderPath = Path.Combine(_filesRoot, FileStore.Photos, id.ToString());
             var filePath = Path.Combine(folderPath, fileName);
 
             if (File.Exists(filePath))
@@ -64,7 +65,7 @@ namespace KooliProjekt.Application.Infrastructure.Files
         
         public Task<List<Stream>> List(int id)
         {
-            var folderPath = Path.Combine(_filesRoot, FileStore.Photos);
+            var folderPath = Path.Combine(_filesRoot, FileStore.Photos, id.ToString());
             var files = new List<Stream>();
 
             if (!Directory.Exists(folderPath))
