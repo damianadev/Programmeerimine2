@@ -38,10 +38,10 @@ namespace KooliProjekt.Application.Features.Reservations
                 .MustAsync(async (id, cancellationToken) =>
                     await dbContext.Cars.AnyAsync(x => x.Id == id, cancellationToken)).WithMessage("The specified car does not exist.");
 
-            RuleFor(x => x.CustomerId)
+            RuleFor(x => x.UserId)
                 .GreaterThan(0)
                 .MustAsync(async (id, cancellationToken) =>
-                    await dbContext.Customers.AnyAsync(x => x.Id == id, cancellationToken)).WithMessage("The specified customer does not exist.");
+                    await dbContext.Users.AnyAsync(x => x.Id == id, cancellationToken)).WithMessage("The specified user does not exist.");
 
         }
     }

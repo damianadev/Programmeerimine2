@@ -22,7 +22,7 @@ namespace KooliProjekt.Application.Data
         [Required]
         public bool Paid { get; set; }
 
-        public int CustomerId { get; set; }
+        public int UserId { get; set; }
 
     }
 }

@@ -21,10 +21,10 @@ namespace KooliProjekt.Application.Features.Invoices
                 .NotEqual(default(DateTime))
                 .GreaterThanOrEqualTo(x => x.InvoiceDate).WithMessage("DueTime must not be earlier than InvoiceDate.");
 
-            RuleFor(x => x.CustomerId)
+            RuleFor(x => x.UserId)
                 .GreaterThan(0)
                 .MustAsync(async (id, cancellationToken) =>
-                    await dbContext.Customers.AnyAsync(x => x.Id == id, cancellationToken)).WithMessage("The specified customer does not exist.");
+                    await dbContext.Users.AnyAsync(x => x.Id == id, cancellationToken)).WithMessage("The specified user does not exist.");
         }
     }
 }

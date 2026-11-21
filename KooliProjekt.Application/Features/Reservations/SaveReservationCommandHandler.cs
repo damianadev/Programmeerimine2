@@ -49,7 +49,7 @@ namespace KooliProjekt.Application.Features.Reservations
             list.TimePrice = request.TimePrice;
             list.KmPrice = request.KmPrice;
             list.CarId = request.CarId;
-            list.CustomerId = request.CustomerId;
+            list.UserId = request.UserId;
 
             await _dbContext.SaveChangesAsync();
 

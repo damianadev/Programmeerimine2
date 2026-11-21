@@ -35,7 +35,7 @@ namespace KooliProjekt.Application.Features.Invoices
                     InvoiceDate = list.InvoiceDate,
                     DueTime = list.DueTime,
                     Paid = list.Paid,
-                    CustomerId = list.CustomerId,
+                    UserId = list.UserId,
                 })
                 .GetPagedAsync(request.Page, request.PageSize);
 

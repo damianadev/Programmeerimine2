@@ -12,6 +12,6 @@ namespace KooliProjekt.Application.Dto
         public DateTime InvoiceDate { get; set; }
         public DateTime DueTime { get; set; }
         public bool Paid { get; set; }
-        public int CustomerId { get; set; }
+        public int UserId { get; set; }
     }
 }

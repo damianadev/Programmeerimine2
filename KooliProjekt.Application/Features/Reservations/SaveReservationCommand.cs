@@ -17,6 +17,6 @@ namespace KooliProjekt.Application.Features.Reservations
         public decimal TimePrice { get; set; }
         public decimal KmPrice { get; set; }
         public int CarId { get; set; }
-        public int CustomerId { get; set; }
+        public int UserId { get; set; }
     }
 }

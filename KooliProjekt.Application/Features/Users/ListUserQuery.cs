@@ -8,9 +8,9 @@ using KooliProjekt.Application.Infrastructure.Results;
 using MediatR;
 using Microsoft.Identity.Client;
 
-namespace KooliProjekt.Application.Features.Customers
+namespace KooliProjekt.Application.Features.Users
 {
-    public class ListCustomerQuery : IRequest<OperationResult<PagedResult<CustomerDto>>>
+    public class ListUserQuery : IRequest<OperationResult<PagedResult<UserDto>>>
     {
         public int Page { get; set; }
         public int PageSize { get; set; }

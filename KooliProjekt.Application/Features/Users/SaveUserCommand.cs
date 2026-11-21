@@ -5,17 +5,17 @@ using KooliProjekt.Application.Behaviors;
 using KooliProjekt.Application.Infrastructure.Results;
 using MediatR;
 
-namespace KooliProjekt.Application.Features.Customers
+namespace KooliProjekt.Application.Features.Users
 {
-    public class SaveCustomerCommand : IRequest<OperationResult>, ITransactional
+    public class SaveUserCommand : IRequest<OperationResult>, ITransactional
     {
         public int Id { get; set; }
 
-        public string CustomerName { get; set; }
+        public string UserName { get; set; }
 
         public string Email { get; set; }
 
-        public bool LoggedIn { get; set; }
+        public bool IsAdmin { get; set; }
 
         public string Password { get; set; }
     }

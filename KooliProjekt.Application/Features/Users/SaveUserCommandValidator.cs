@@ -5,29 +5,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace KooliProjekt.Application.Features.Customers
+namespace KooliProjekt.Application.Features.Users
 {
-    public class SaveCustomerCommandValidator : AbstractValidator<SaveCustomerCommand>
+    public class SaveUserCommandValidator : AbstractValidator<SaveUserCommand>
     {
-        public SaveCustomerCommandValidator(ApplicationDbContext dbContext)
+        public SaveUserCommandValidator(ApplicationDbContext dbContext)
         {
             RuleFor(x => x.Id)
                 .GreaterThanOrEqualTo(1).WithMessage("Id must be greater than or equal to 1.");
 
-            RuleFor(x => x.CustomerName)
-                .NotEmpty().WithMessage("Customer name is required.")
-                .MaximumLength(25).WithMessage("Customer name must not exceed 25 characters.")
+            RuleFor(x => x.UserName)
+                .NotEmpty().WithMessage("User name is required.")
+                .MaximumLength(25).WithMessage("User name must not exceed 25 characters.")
                 .Custom((name, context) =>
                 {
                     var command = context.InstanceToValidate;
 
-                    var existingCustomer = dbContext.Customers
-                        .Any(c => c.CustomerName == name &&
-                                  c.Id != command.Id);
+                    var existingCustomer = dbContext.Users
+                        .Any(u => u.UserName == name &&
+                                  u.Id != command.Id);
 
                     if (existingCustomer)
                     {
-                        context.AddFailure("CustomerName","A customer with the same name already exists.");
+                        context.AddFailure("UserName","A User with the same name already exists.");
                     }
                 });
 

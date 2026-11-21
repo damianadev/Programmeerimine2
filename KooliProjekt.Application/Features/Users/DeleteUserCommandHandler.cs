@@ -9,20 +9,20 @@ using KooliProjekt.Application.Infrastructure.Results;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace KooliProjekt.Application.Features.Customers
+namespace KooliProjekt.Application.Features.Users
 {
-    public class DeleteCustomerCommandHandler : IRequestHandler<DeleteCustomerCommand, OperationResult>
+    public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, OperationResult>
     {
         private readonly ApplicationDbContext _dbContext;
 
-        public DeleteCustomerCommandHandler(ApplicationDbContext dbContext)
+        public DeleteUserCommandHandler(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public async Task<OperationResult> Handle(DeleteCustomerCommand request, CancellationToken cancellationToken)
+        public async Task<OperationResult> Handle(DeleteUserCommand request, CancellationToken cancellationToken)
         {
-            await _dbContext.Customers
+            await _dbContext.Users
                 .Where(list => list.Id == request.Id)
                 .ExecuteDeleteAsync();
 

@@ -11,12 +11,12 @@ namespace KooliProjekt.Application.Data
     {
         public static void Generate(ApplicationDbContext context)
         {
-            if(context.Customers.Any())
+            if(context.Users.Any())
             {
                 return;
             }
 
-            SeedCustomers(context);
+            SeedUsers(context);
             SeedCarManufacturers(context);
             SeedCarModels(context);
             SeedCars(context);
@@ -25,257 +25,257 @@ namespace KooliProjekt.Application.Data
             SeedInvoiceLines(context);
         }
 
-        public static void SeedCustomers(ApplicationDbContext context)
+        public static void SeedUsers(ApplicationDbContext context)
         {
-            var customers = new List<Customer>
+            var users = new List<User>
             {
-                new Customer
+                new User
                 {
-                    CustomerName = "Alexander Miller",
+                    UserName = "Alexander Miller",
                     Email = "alexander.miller@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "AlexMiller2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Emma Johnson",
+                    UserName = "Emma Johnson",
                     Email = "emma.johnson@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "EmmaJohnson2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Daniel Wilson",
+                    UserName = "Daniel Wilson",
                     Email = "daniel.wilson@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "DanielWilson2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Olivia Brown",
+                    UserName = "Olivia Brown",
                     Email = "olivia.brown@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "OliviaBrown2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Michael Davis",
+                    UserName = "Michael Davis",
                     Email = "michael.davis@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "MichaelDavis2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Sophia Martin",
+                    UserName = "Sophia Martin",
                     Email = "sophia.martin@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "SophiaMartin2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "James Anderson",
+                    UserName = "James Anderson",
                     Email = "james.anderson@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "JamesAnderson2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Isabella Taylor",
+                    UserName = "Isabella Taylor",
                     Email = "isabella.taylor@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "IsabellaTaylor2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "William Thomas",
+                    UserName = "William Thomas",
                     Email = "william.thomas@example.com",
-                    LoggedIn = true,
+                    IsAdmin = true,
                     Password = "WilliamThomas2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Ava Jackson",
+                    UserName = "Ava Jackson",
                     Email = "ava.jackson@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "AvaJackson2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Benjamin White",
+                    UserName = "Benjamin White",
                     Email = "benjamin.white@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "BenjaminWhite2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Mia Harris",
+                    UserName = "Mia Harris",
                     Email = "mia.harris@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "MiaHarris2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Lucas Clark",
+                    UserName = "Lucas Clark",
                     Email = "lucas.clark@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "LucasClark2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Charlotte Lewis",
+                    UserName = "Charlotte Lewis",
                     Email = "charlotte.lewis@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "CharlotteLewis2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Henry Walker",
+                    UserName = "Henry Walker",
                     Email = "henry.walker@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "HenryWalker2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Amelia Hall",
+                    UserName = "Amelia Hall",
                     Email = "amelia.hall@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "AmeliaHall2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Sebastian Allen",
+                    UserName = "Sebastian Allen",
                     Email = "sebastian.allen@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "SebastianAllen2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Harper Young",
+                    UserName = "Harper Young",
                     Email = "harper.young@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "HarperYoung2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Jack Hernandez",
+                    UserName = "Jack Hernandez",
                     Email = "jack.hernandez@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "JackHernandez2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Evelyn King",
+                    UserName = "Evelyn King",
                     Email = "evelyn.king@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "EvelynKing2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Theodore Wright",
+                    UserName = "Theodore Wright",
                     Email = "theodore.wright@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "TheodoreWright2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Abigail Lopez",
+                    UserName = "Abigail Lopez",
                     Email = "abigail.lopez@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "AbigailLopez2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Samuel Hill",
+                    UserName = "Samuel Hill",
                     Email = "samuel.hill@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "SamuelHill2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Ella Scott",
+                    UserName = "Ella Scott",
                     Email = "ella.scott@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "EllaScott2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "David Green",
+                    UserName = "David Green",
                     Email = "david.green@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "DavidGreen2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Grace Adams",
+                    UserName = "Grace Adams",
                     Email = "grace.adams@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "GraceAdams2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Joseph Baker",
+                    UserName = "Joseph Baker",
                     Email = "joseph.baker@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "JosephBaker2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Chloe Gonzalez",
+                    UserName = "Chloe Gonzalez",
                     Email = "chloe.gonzalez@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "ChloeGonzalez2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Matthew Nelson",
+                    UserName = "Matthew Nelson",
                     Email = "matthew.nelson@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "MatthewNelson2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Lily Carter",
+                    UserName = "Lily Carter",
                     Email = "lily.carter@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "LilyCarter2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Andrew Mitchell",
+                    UserName = "Andrew Mitchell",
                     Email = "andrew.mitchell@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "AndrewMitchell2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Zoe Perez",
+                    UserName = "Zoe Perez",
                     Email = "zoe.perez@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "ZoePerez2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Christopher Roberts",
+                    UserName = "Christopher Roberts",
                     Email = "christopher.roberts@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "ChristopherRoberts2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Natalie Turner",
+                    UserName = "Natalie Turner",
                     Email = "natalie.turner@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "NatalieTurner2026!"
                 },
-                new Customer
+                new User
                 {
-                    CustomerName = "Ryan Phillips",
+                    UserName = "Ryan Phillips",
                     Email = "ryan.phillips@example.com",
-                    LoggedIn = true,
+                    IsAdmin = false,
                     Password = "RyanPhillips2026!"
                 }
             };
-            context.Customers.AddRange(customers);
+            context.Users.AddRange(users);
             context.SaveChanges();
         }
         public static void SeedCars(ApplicationDbContext context)
@@ -630,7 +630,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.50m,
                     KmPrice = 0.25m,
                     CarId = 1,
-                    CustomerId = 1
+                    UserId = 1
                 },
                 new Reservation
                 {
@@ -641,7 +641,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 4.75m,
                     KmPrice = 0.30m,
                     CarId = 2,
-                    CustomerId = 2
+                    UserId = 2
                 },
                 new Reservation
                 {
@@ -652,7 +652,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 7.25m,
                     KmPrice = 0.20m,
                     CarId = 3,
-                    CustomerId = 3
+                    UserId = 3
                 },
                 new Reservation
                 {
@@ -663,7 +663,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 6.00m,
                     KmPrice = 0.28m,
                     CarId = 4,
-                    CustomerId = 4
+                    UserId = 4
                 },
                 new Reservation
                 {
@@ -674,7 +674,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 8.50m,
                     KmPrice = 0.35m,
                     CarId = 5,
-                    CustomerId = 5
+                    UserId = 5
                 },
                 new Reservation
                 {
@@ -685,7 +685,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.25m,
                     KmPrice = 0.22m,
                     CarId = 6,
-                    CustomerId = 6
+                    UserId = 6
                 },
                 new Reservation
                 {
@@ -696,7 +696,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 9.00m,
                     KmPrice = 0.40m,
                     CarId = 7,
-                    CustomerId = 7
+                    UserId = 7
                 },
                 new Reservation
                 {
@@ -707,7 +707,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 4.50m,
                     KmPrice = 0.25m,
                     CarId = 8,
-                    CustomerId = 8
+                    UserId = 8
                 },
                 new Reservation
                 {
@@ -718,7 +718,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 6.75m,
                     KmPrice = 0.32m,
                     CarId = 9,
-                    CustomerId = 9
+                    UserId = 9
                 },
                 new Reservation
                 {
@@ -729,7 +729,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 7.80m,
                     KmPrice = 0.27m,
                     CarId = 10,
-                    CustomerId = 10
+                    UserId = 10
                 },
                 new Reservation
                 {
@@ -740,7 +740,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.00m,
                     KmPrice = 0.24m,
                     CarId = 11,
-                    CustomerId = 11
+                    UserId = 11
                 },
                 new Reservation
                 {
@@ -751,7 +751,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 8.25m,
                     KmPrice = 0.36m,
                     CarId = 12,
-                    CustomerId = 12
+                    UserId = 12
                 },
                 new Reservation
                 {
@@ -762,7 +762,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.80m,
                     KmPrice = 0.29m,
                     CarId = 13,
-                    CustomerId = 13
+                    UserId = 13
                 },
                 new Reservation
                 {
@@ -773,7 +773,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 9.50m,
                     KmPrice = 0.38m,
                     CarId = 14,
-                    CustomerId = 14
+                    UserId = 14
                 },
                 new Reservation
                 {
@@ -784,7 +784,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 4.90m,
                     KmPrice = 0.23m,
                     CarId = 15,
-                    CustomerId = 15
+                    UserId = 15
                 },
                 new Reservation
                 {
@@ -795,7 +795,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 7.60m,
                     KmPrice = 0.31m,
                     CarId = 16,
-                    CustomerId = 16
+                    UserId = 16
                 },
                 new Reservation
                 {
@@ -806,7 +806,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.40m,
                     KmPrice = 0.26m,
                     CarId = 17,
-                    CustomerId = 17
+                    UserId = 17
                 },
                 new Reservation
                 {
@@ -817,7 +817,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 8.90m,
                     KmPrice = 0.34m,
                     CarId = 18,
-                    CustomerId = 18
+                    UserId = 18
                 },
                 new Reservation
                 {
@@ -828,7 +828,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 6.20m,
                     KmPrice = 0.21m,
                     CarId = 19,
-                    CustomerId = 19
+                    UserId = 19
                 },
                 new Reservation
                 {
@@ -839,7 +839,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 7.10m,
                     KmPrice = 0.33m,
                     CarId = 20,
-                    CustomerId = 20
+                    UserId = 20
                 },
                 new Reservation
                 {
@@ -850,7 +850,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 4.80m,
                     KmPrice = 0.25m,
                     CarId = 21,
-                    CustomerId = 21
+                    UserId = 21
                 },
                 new Reservation
                 {
@@ -861,7 +861,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 9.20m,
                     KmPrice = 0.37m,
                     CarId = 22,
-                    CustomerId = 22
+                    UserId = 22
                 },
                 new Reservation
                 {
@@ -872,7 +872,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.60m,
                     KmPrice = 0.28m,
                     CarId = 23,
-                    CustomerId = 23
+                    UserId = 23
                 },
                 new Reservation
                 {
@@ -883,7 +883,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 8.40m,
                     KmPrice = 0.30m,
                     CarId = 24,
-                    CustomerId = 24
+                    UserId = 24
                 },
                 new Reservation
                 {
@@ -894,7 +894,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.15m,
                     KmPrice = 0.24m,
                     CarId = 25,
-                    CustomerId = 25
+                    UserId = 25
                 },
                 new Reservation
                 {
@@ -905,7 +905,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 7.90m,
                     KmPrice = 0.35m,
                     CarId = 26,
-                    CustomerId = 26
+                    UserId = 26
                 },
                 new Reservation
                 {
@@ -916,7 +916,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 4.65m,
                     KmPrice = 0.22m,
                     CarId = 27,
-                    CustomerId = 27
+                    UserId = 27
                 },
                 new Reservation
                 {
@@ -927,7 +927,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 8.70m,
                     KmPrice = 0.39m,
                     CarId = 28,
-                    CustomerId = 28
+                    UserId = 28
                 },
                 new Reservation
                 {
@@ -938,7 +938,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 6.10m,
                     KmPrice = 0.27m,
                     CarId = 29,
-                    CustomerId = 29
+                    UserId = 29
                 },
                 new Reservation
                 {
@@ -949,7 +949,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 9.10m,
                     KmPrice = 0.32m,
                     CarId = 30,
-                    CustomerId = 30
+                    UserId = 30
                 },
                 new Reservation
                 {
@@ -960,7 +960,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.35m,
                     KmPrice = 0.26m,
                     CarId = 31,
-                    CustomerId = 31
+                    UserId = 31
                 },
                 new Reservation
                 {
@@ -971,7 +971,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 8.60m,
                     KmPrice = 0.36m,
                     CarId = 32,
-                    CustomerId = 32
+                    UserId = 32
                 },
                 new Reservation
                 {
@@ -982,7 +982,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 4.95m,
                     KmPrice = 0.23m,
                     CarId = 33,
-                    CustomerId = 33
+                    UserId = 33
                 },
                 new Reservation
                 {
@@ -993,7 +993,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 9.40m,
                     KmPrice = 0.34m,
                     CarId = 34,
-                    CustomerId = 34
+                    UserId = 34
                 },
                 new Reservation
                 {
@@ -1004,7 +1004,7 @@ namespace KooliProjekt.Application.Data
                     TimePrice = 5.75m,
                     KmPrice = 0.25m,
                     CarId = 35,
-                    CustomerId = 35
+                    UserId = 35
                 }
             };
             context.Reservations.AddRange(reservations);
@@ -1019,245 +1019,245 @@ namespace KooliProjekt.Application.Data
                     InvoiceDate = new DateTime(2026, 1, 5, 9, 15, 0),
                     DueTime = new DateTime(2026, 1, 19, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 1
+                    UserId = 1
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 1, 8, 11, 42, 18),
                     DueTime = new DateTime(2026, 2, 7, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 2
+                    UserId = 2
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 1, 12, 14, 8, 35),
                     DueTime = new DateTime(2026, 1, 26, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 3
+                    UserId = 3
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 1, 15, 10, 25, 12),
                     DueTime = new DateTime(2026, 2, 14, 18, 0, 0),
                     Paid = false,
-                    CustomerId = 4
+                    UserId = 4
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 1, 20, 16, 37, 49),
                     DueTime = new DateTime(2026, 2, 3, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 5
+                    UserId = 5
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 1, 24, 8, 52, 6),
                     DueTime = new DateTime(2026, 2, 23, 17, 30, 0),
                     Paid = false,
-                    CustomerId = 6
+                    UserId = 6
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 2, 2, 13, 18, 27),
                     DueTime = new DateTime(2026, 2, 16, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 7
+                    UserId = 7
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 2, 5, 15, 44, 51),
                     DueTime = new DateTime(2026, 3, 7, 16, 0, 0),
                     Paid = false,
-                    CustomerId = 8
+                    UserId = 8
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 2, 9, 9, 6, 42),
                     DueTime = new DateTime(2026, 2, 23, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 9
+                    UserId = 9
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 2, 13, 12, 31, 15),
                     DueTime = new DateTime(2026, 3, 15, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 10
+                    UserId = 10
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 2, 18, 10, 12, 8),
                     DueTime = new DateTime(2026, 3, 4, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 11
+                    UserId = 11
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 2, 22, 17, 5, 33),
                     DueTime = new DateTime(2026, 3, 24, 18, 0, 0),
                     Paid = false,
-                    CustomerId = 12
+                    UserId = 12
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 3, 1, 8, 45, 20),
                     DueTime = new DateTime(2026, 3, 15, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 13
+                    UserId = 13
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 3, 4, 14, 22, 47),
                     DueTime = new DateTime(2026, 4, 3, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 14
+                    UserId = 14
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 3, 8, 11, 9, 14),
                     DueTime = new DateTime(2026, 3, 22, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 15
+                    UserId = 15
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 3, 12, 16, 53, 2),
                     DueTime = new DateTime(2026, 4, 11, 18, 30, 0),
                     Paid = false,
-                    CustomerId = 16
+                    UserId = 16
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 3, 17, 9, 34, 56),
                     DueTime = new DateTime(2026, 3, 31, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 17
+                    UserId = 17
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 3, 21, 13, 47, 21),
                     DueTime = new DateTime(2026, 4, 20, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 18
+                    UserId = 18
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 4, 2, 10, 16, 39),
                     DueTime = new DateTime(2026, 4, 16, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 19
+                    UserId = 19
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 4, 6, 15, 28, 4),
                     DueTime = new DateTime(2026, 5, 6, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 20
+                    UserId = 20
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 4, 10, 8, 57, 43),
                     DueTime = new DateTime(2026, 4, 24, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 21
+                    UserId = 21
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 4, 14, 12, 41, 26),
                     DueTime = new DateTime(2026, 5, 14, 18, 0, 0),
                     Paid = false,
-                    CustomerId = 22
+                    UserId = 22
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 4, 19, 14, 3, 17),
                     DueTime = new DateTime(2026, 5, 3, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 23
+                    UserId = 23
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 4, 23, 9, 26, 48),
                     DueTime = new DateTime(2026, 5, 23, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 24
+                    UserId = 24
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 5, 3, 11, 38, 9),
                     DueTime = new DateTime(2026, 5, 17, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 25
+                    UserId = 25
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 5, 7, 16, 19, 52),
                     DueTime = new DateTime(2026, 6, 6, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 26
+                    UserId = 26
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 5, 11, 10, 48, 31),
                     DueTime = new DateTime(2026, 5, 25, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 27
+                    UserId = 27
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 5, 16, 13, 7, 45),
                     DueTime = new DateTime(2026, 6, 15, 18, 0, 0),
                     Paid = false,
-                    CustomerId = 28
+                    UserId = 28
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 6, 1, 9, 21, 13),
                     DueTime = new DateTime(2026, 6, 15, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 29
+                    UserId = 29
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 6, 5, 14, 56, 38),
                     DueTime = new DateTime(2026, 7, 5, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 30
+                    UserId = 30
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 6, 10, 11, 32, 5),
                     DueTime = new DateTime(2026, 6, 24, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 31
+                    UserId = 31
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 7, 2, 15, 14, 29),
                     DueTime = new DateTime(2026, 7, 16, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 32
+                    UserId = 32
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 8, 12, 10, 5, 44),
                     DueTime = new DateTime(2026, 8, 26, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 33
+                    UserId = 33
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 9, 18, 13, 49, 16),
                     DueTime = new DateTime(2026, 10, 18, 17, 0, 0),
                     Paid = false,
-                    CustomerId = 34
+                    UserId = 34
                 },
                 new Invoice
                 {
                     InvoiceDate = new DateTime(2026, 10, 2, 14, 30, 0),
                     DueTime = new DateTime(2026, 10, 16, 23, 59, 59),
                     Paid = true,
-                    CustomerId = 35
+                    UserId = 35
                 }
             };
             context.Invoices.AddRange(invoices);

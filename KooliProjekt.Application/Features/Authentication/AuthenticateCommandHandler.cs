@@ -36,8 +36,8 @@ namespace KooliProjekt.Application.Features.Authentication
 
             var response = new OperationResult<string>();
             var user = await _dbContext
-                .Customers
-                .FirstOrDefaultAsync(c => c.CustomerName == request.UserName);
+                .Users
+                .FirstOrDefaultAsync(u => u.UserName == request.UserName);
 
             if (user == null || !PasswordHelper.Verify(request.Password, user.Password))
             {
@@ -48,7 +48,7 @@ namespace KooliProjekt.Application.Features.Authentication
 
             var token = _tokenBuilder.GenerateToken(
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.CustomerName));
+                new Claim(ClaimTypes.Name, user.UserName));
 
             response.Value = token;
 

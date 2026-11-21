@@ -45,7 +45,7 @@ namespace KooliProjekt.Application.Features.Invoices
             list.InvoiceDate = request.InvoiceDate;
             list.DueTime = request.DueTime;
             list.Paid = request.Paid;
-            list.CustomerId = request.CustomerId;
+            list.UserId = request.UserId;
 
 
             await _dbContext.SaveChangesAsync();

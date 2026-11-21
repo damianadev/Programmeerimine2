@@ -4,11 +4,11 @@ using System.Text;
 using FluentValidation;
 using KooliProjekt.Application.Data;
 
-namespace KooliProjekt.Application.Features.Customers
+namespace KooliProjekt.Application.Features.Users
 {
-    public class GetCustomerQueryValidator : AbstractValidator<GetCustomerQuery>
+    public class DeleteUserCommandValidator : AbstractValidator<DeleteUserCommand>
     {
-        public GetCustomerQueryValidator(ApplicationDbContext dbContext)
+        public DeleteUserCommandValidator(ApplicationDbContext dbContext)
         {
             RuleFor(x => x.Id)
                 .GreaterThanOrEqualTo(1).WithMessage("Id must be greater than or equal to 1.");

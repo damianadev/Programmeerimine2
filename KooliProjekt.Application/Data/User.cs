@@ -7,21 +7,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KooliProjekt.Application.Data
 {
-    [Index(nameof(CustomerName), IsUnique = true)]
-    public class Customer
+    [Index(nameof(UserName), IsUnique = true)]
+    public class User
     {
         public int Id { get; set; }
 
         [Required]
         [StringLength(25)]
-        public string CustomerName { get; set; }
+        public string UserName { get; set; }
 
         [Required]
         [StringLength(255)]
         public string Email { get; set; }
 
         [Required]
-        public bool LoggedIn { get; set; }
+        public bool IsAdmin { get; set; }
 
         [Required]
         [StringLength(255)]

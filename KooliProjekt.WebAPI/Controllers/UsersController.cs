@@ -1,16 +1,16 @@
 ﻿using System.Threading.Tasks;
-using KooliProjekt.Application.Features.Customers;
+using KooliProjekt.Application.Features.Users;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 
 namespace KooliProjekt.WebAPI.Controllers
 {
-    public class CustomersController : ApiControllerBase
+    public class UsersController : ApiControllerBase
     {
         private readonly IMediator _mediator;
 
-        public CustomersController(IMediator mediator)
+        public UsersController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -23,7 +23,7 @@ namespace KooliProjekt.WebAPI.Controllers
                 return NotFound();
             }
 
-            var query = new GetCustomerQuery { Id = id };
+            var query = new GetUserQuery { Id = id };
             var result = await _mediator.Send(query);
 
             return Result(result);
@@ -32,7 +32,7 @@ namespace KooliProjekt.WebAPI.Controllers
         [HttpGet("list/{page}/{pageSize}")]
         public async Task<IActionResult> List(int page, int pageSize)
         {
-            var query = new ListCustomerQuery
+            var query = new ListUserQuery
             {
                 Page = page,
                 PageSize = pageSize
@@ -44,7 +44,7 @@ namespace KooliProjekt.WebAPI.Controllers
         }
 
         [HttpPost("save")]
-        public async Task<IActionResult> Save([FromBody] SaveCustomerCommand command)
+        public async Task<IActionResult> Save([FromBody] SaveUserCommand command)
         {
             var result = await _mediator.Send(command);
 
@@ -52,7 +52,7 @@ namespace KooliProjekt.WebAPI.Controllers
         }
 
         [HttpDelete("delete")]
-        public async Task<IActionResult> Delete([FromBody] DeleteCustomerCommand command)
+        public async Task<IActionResult> Delete([FromBody] DeleteUserCommand command)
         {
             var result = await _mediator.Send(command);
 

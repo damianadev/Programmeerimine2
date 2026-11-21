@@ -38,7 +38,7 @@ namespace KooliProjekt.Application.Features.Reservations
                     TimePrice = list.TimePrice,
                     KmPrice = list.KmPrice,
                     CarId = list.CarId,
-                    CustomerId = list.CustomerId,
+                    UserId = list.UserId,
                 })
                 .FirstOrDefaultAsync(cancellationToken);
 

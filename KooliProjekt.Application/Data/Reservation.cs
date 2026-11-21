@@ -37,7 +37,7 @@ namespace KooliProjekt.Application.Data
 
         public int CarId { get; set; }
 
-        public int CustomerId { get; set; }
+        public int UserId { get; set; }
 
     }
 }
