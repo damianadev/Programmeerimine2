@@ -17,194 +17,194 @@ namespace KooliProjekt.Application.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.12")
+                .HasAnnotation("ProductVersion", "10.0.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("KooliProjekt.Application.Data.Car", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                b.Property<int>("CarModelId")
-                    .HasColumnType("int");
+                    b.Property<int>("CarModelId")
+                        .HasColumnType("int");
 
-                b.Property<bool>("ReservationNo")
-                    .HasColumnType("bit");
+                    b.Property<bool>("ReservationNo")
+                        .HasColumnType("bit");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("Cars");
-            });
+                    b.ToTable("Cars");
+                });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.CarManufacturer", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                b.Property<string>("Name")
-                    .IsRequired()
-                    .HasMaxLength(25)
-                    .HasColumnType("nvarchar(25)");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("CarManufacturers");
-            });
+                    b.ToTable("CarManufacturers");
+                });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.CarModel", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                b.Property<int>("CarManufacturerId")
-                    .HasColumnType("int");
+                    b.Property<int>("CarManufacturerId")
+                        .HasColumnType("int");
 
-                b.Property<decimal>("KmPrice")
-                    .HasColumnType("decimal(18, 2)");
+                    b.Property<decimal>("KmPrice")
+                        .HasColumnType("decimal(18, 2)");
 
-                b.Property<string>("Name")
-                    .IsRequired()
-                    .HasMaxLength(25)
-                    .HasColumnType("nvarchar(25)");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
-                b.Property<decimal>("TimePrice")
-                    .HasColumnType("decimal(18, 2)");
+                    b.Property<decimal>("TimePrice")
+                        .HasColumnType("decimal(18, 2)");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("CarModels");
-            });
-
-            modelBuilder.Entity("KooliProjekt.Application.Data.Customer", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
-
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                b.Property<string>("CustomerName")
-                    .IsRequired()
-                    .HasMaxLength(25)
-                    .HasColumnType("nvarchar(25)");
-
-                b.Property<string>("Email")
-                    .IsRequired()
-                    .HasMaxLength(255)
-                    .HasColumnType("nvarchar(255)");
-
-                b.Property<bool>("LoggedIn")
-                    .HasColumnType("bit");
-
-                b.Property<string>("Password")
-                    .IsRequired()
-                    .HasMaxLength(255)
-                    .HasColumnType("nvarchar(255)");
-
-                b.HasKey("Id");
-
-                b.HasIndex("CustomerName")
-                    .IsUnique();
-
-                b.ToTable("Customers");
-            });
+                    b.ToTable("CarModels");
+                });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.Invoice", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                b.Property<int>("CustomerId")
-                    .HasColumnType("int");
+                    b.Property<DateTime>("DueTime")
+                        .HasColumnType("datetime2");
 
-                b.Property<DateTime>("DueTime")
-                    .HasColumnType("datetime2");
+                    b.Property<DateTime>("InvoiceDate")
+                        .HasColumnType("datetime2");
 
-                b.Property<DateTime>("InvoiceDate")
-                    .HasColumnType("datetime2");
+                    b.Property<bool>("Paid")
+                        .HasColumnType("bit");
 
-                b.Property<bool>("Paid")
-                    .HasColumnType("bit");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("Invoices");
-            });
+                    b.ToTable("Invoices");
+                });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.InvoiceLine", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                b.Property<string>("Description")
-                    .IsRequired()
-                    .HasMaxLength(255)
-                    .HasColumnType("nvarchar(255)");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
-                b.Property<int>("ReservationId")
-                    .HasColumnType("int");
+                    b.Property<int>("ReservationId")
+                        .HasColumnType("int");
 
-                b.Property<decimal>("Total")
-                    .HasColumnType("decimal(18, 2)");
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18, 2)");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("InvoiceLines");
-            });
+                    b.ToTable("InvoiceLines");
+                });
 
             modelBuilder.Entity("KooliProjekt.Application.Data.Reservation", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                b.Property<int>("CarId")
-                    .HasColumnType("int");
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
 
-                b.Property<int>("CustomerId")
-                    .HasColumnType("int");
+                    b.Property<decimal>("EndKm")
+                        .HasColumnType("decimal(18, 2)");
 
-                b.Property<decimal>("EndKm")
-                    .HasColumnType("decimal(18, 2)");
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime2");
 
-                b.Property<DateTime>("EndTime")
-                    .HasColumnType("datetime2");
+                    b.Property<decimal>("KmPrice")
+                        .HasColumnType("decimal(18, 2)");
 
-                b.Property<decimal>("KmPrice")
-                    .HasColumnType("decimal(18, 2)");
+                    b.Property<decimal>("StartKm")
+                        .HasColumnType("decimal(18, 2)");
 
-                b.Property<decimal>("StartKm")
-                    .HasColumnType("decimal(18, 2)");
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2");
 
-                b.Property<DateTime>("StartTime")
-                    .HasColumnType("datetime2");
+                    b.Property<decimal>("TimePrice")
+                        .HasColumnType("decimal(18, 2)");
 
-                b.Property<decimal>("TimePrice")
-                    .HasColumnType("decimal(18, 2)");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("Reservations");
-            });
+                    b.ToTable("Reservations");
+                });
+
+            modelBuilder.Entity("KooliProjekt.Application.Data.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserName")
+                        .IsUnique();
+
+                    b.ToTable("Users");
+                });
 #pragma warning restore 612, 618
         }
     }
